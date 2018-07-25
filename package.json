@@ -1,28 +1,40 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "name": "alvac.xyz",
+  "description": "alvac.xyz",
+  "version": "0.0.1",
+  "author": "Alva Cheung",
   "dependencies": {
-    "bulma": "^0.6.0",
-    "gatsby": "^1.9.213",
-    "gatsby-link": "^1.6.37",
-    "gatsby-plugin-netlify": "^1.0.19",
-    "gatsby-plugin-netlify-cms": "^1.0.9",
-    "gatsby-plugin-react-helmet": "^2.0.5",
-    "gatsby-plugin-sass": "^1.0.17",
-    "gatsby-plugin-sharp": "^1.6.34",
-    "gatsby-remark-images": "^1.5.50",
-    "gatsby-source-filesystem": "^1.5.23",
-    "gatsby-transformer-remark": "^1.7.33",
-    "gatsby-transformer-sharp": "^1.6.21",
+    "ajv": "^6.5.2",
+    "bulma": "^0.6.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "gatsby": "^2.0.0-beta.57",
+    "gatsby-image": "next",
+    "gatsby-plugin-google-analytics": "next",
+    "gatsby-plugin-netlify": "next",
+    "gatsby-plugin-netlify-cms": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-sass": "next",
+    "gatsby-plugin-sharp": "next",
+    "gatsby-remark-images": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-remark": "next",
+    "gatsby-transformer-sharp": "next",
+    "immutable": "^3.8.2",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^1.7.0",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
+    "node-sass": "^4.9.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "uuid": "^3.2.1"
+    "slate": "^0.34.7",
+    "uuid": "^3.2.1",
+    "webpack": "^4.16.2"
+  },
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   },
   "keywords": [
     "gatsby"
@@ -38,6 +50,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.7.4"
+    "@storybook/react": "^3.4.8",
+    "babel-core": "^6.26.3",
+    "prettier": "^1.13.7"
   }
 }
