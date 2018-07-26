@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: page test 2
 description: page test 2
-image: /img/chemex.jpg
+image: /img/2018-07-25-20.51.17.jpg
 thumbnail: /img/coffee-gear.png
 tags:
   - A
