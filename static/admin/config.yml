@@ -25,9 +25,7 @@ collections:
     label: "View"
     folder: "src/pages/views"
     create: true
-    slug:
-      encoding: "unicode"
-      clean_accents: true
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
