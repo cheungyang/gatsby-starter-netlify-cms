@@ -1,10 +1,8 @@
 ---
-templateKey: 'view'
-language: 'en'
-title: 'page test 1 title'
-date: 2017-01-04T15:04:10.000Z
-description: >-
-  Page test 1
+templateKey: view
+title: page test 1 title modified
+description: Page test 1
+image: /img/chemex.jpg
 thumbnail: url1
 tags:
   - page-tag-A
