@@ -1,5 +1,5 @@
 ---
-templateKey: 'page'
+templateKey: 'view'
 language: 'en'
 title: 'page test 1 title'
 date: 2017-01-04T15:04:10.000Z
