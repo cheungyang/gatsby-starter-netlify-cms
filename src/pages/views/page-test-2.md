@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: view
 title: page test 2
 description: page test 2
 image: /img/2018-07-25-20.51.17.jpg

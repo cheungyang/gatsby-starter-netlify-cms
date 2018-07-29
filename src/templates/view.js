@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-import Content, { HTMLContent } from '../components/Content'
+import Content, { HTMLContent } from 'components/Admin/Content'
 import { graphql } from "gatsby"
 
 export const PageTemplate = ({
