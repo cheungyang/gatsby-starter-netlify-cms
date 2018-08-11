@@ -1,49 +1,35 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-import Content, { HTMLContent } from 'components/Admin/Content'
+import Content, { HTMLContent } from 'components/Admin/Content.js'
 import { graphql } from "gatsby"
+import Layout from 'templates/layout.js'
 
-export const PageTemplate = ({
+export const ViewTemplate = ({
   content,
   contentComponent,
-  description,  
-  tags,
   title,
 }) => {
   const ViewContent = contentComponent || Content
-
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <ViewContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Layout>
+      <h1>{title}</h1>
+       <ViewContent className="content" content={content} />
+    </Layout>
   )
 }
 
-PageTemplate.propTypes = {
+ViewTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  helmet: PropTypes.instanceOf(Helmet),
 }
 
-const Page = ({ data }) => {
+
+const View = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <PageTemplate
+    <ViewTemplate
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
       content={post.html}
@@ -51,14 +37,15 @@ const Page = ({ data }) => {
   )
 }
 
-Page.propTypes = {
+View.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default Page
+export default View
 
-export const PageQuery = graphql`
-  query Page($id: String!) {
+
+export const ViewQuery = graphql`
+  query ViewQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

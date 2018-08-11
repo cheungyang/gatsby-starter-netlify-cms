@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
@@ -9,7 +10,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import infoStyle from "assets/jss/material-kit-react/components/infoStyle.jsx";
 
 function InfoArea({ ...props }) {
-  const { classes, title, description, iconColor, vertical } = props;
+  const { classes, title, description, iconColor, slug, vertical } = props;
   const iconWrapper = classNames({
     [classes.iconWrapper]: true,
     [classes[iconColor]]: true,
@@ -20,15 +21,17 @@ function InfoArea({ ...props }) {
     [classes.iconVertical]: vertical
   });
   return (
-    <div className={classes.infoArea}>
-      <div className={iconWrapper}>
-        <props.icon className={iconClasses} />
+    <Link to={'/' + slug}>
+      <div className={classes.infoArea}>
+        <div className={iconWrapper}>
+          <props.icon className={iconClasses} />
+        </div>
+        <div className={classes.descriptionWrapper}>
+          <h4 className={classes.title}>{title}</h4>
+          <p className={classes.description}>{description}</p>
+        </div>
       </div>
-      <div className={classes.descriptionWrapper}>
-        <h4 className={classes.title}>{title}</h4>
-        <p className={classes.description}>{description}</p>
-      </div>
-    </div>
+    </Link>
   );
 }
 

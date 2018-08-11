@@ -33,7 +33,7 @@ module.exports = (baseConfig, env, config) => {
       test: /\.(scss|sass)$/,
       exclude: /node_modules/,
       include: path.resolve(__dirname, '../'),
-      loaders: ['style-loader', 'css-loader', 'sass-loader'],
+      loaders: ['css-loader', 'sass-loader'],
     });
   config.plugins.push(new TSDocgenPlugin()); // optional
   config.resolve.extensions.push(

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from "gatsby"
-import Content, { HTMLContent } from 'components/Admin/Content'
+import Content, { HTMLContent } from 'components/Admin/Content.js'
 
 export const BlogTemplate = ({
   content,

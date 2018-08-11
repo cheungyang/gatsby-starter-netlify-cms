@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'alvac.xyz',
+    title: 'Kwai Yeung Consultant',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
